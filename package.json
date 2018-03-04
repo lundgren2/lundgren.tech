@@ -4,10 +4,16 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "emotion": "^9.0.2",
+    "emotion-server": "^9.0.2",
     "gatsby": "^1.9.223",
     "gatsby-link": "^1.6.38",
+    "gatsby-plugin-emotion": "^1.1.15",
     "gatsby-plugin-react-helmet": "^2.0.6",
-    "react-helmet": "^5.2.0"
+    "gatsby-plugin-typography": "^1.7.17",
+    "react-emotion": "^9.0.2",
+    "react-helmet": "^5.2.0",
+    "typography-breakpoint-constants": "^0.15.10"
   },
   "keywords": [
     "gatsby"
@@ -17,10 +23,11 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format": "prettier es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
