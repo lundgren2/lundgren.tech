@@ -13,13 +13,13 @@ align-items: center;
 white-space: nowrap;
 justify-content: center;
 text-decoration: none;
-/*color: inherit;*/
+border-radius: 5px;
 color: black;
 cursor: pointer;
-background-color: rgba(255, 255, 255, 0.93);
-height: 2.5em;
-min-width: 2.5em;
-padding: 0 0.68em;
+background-color: rgba(255, 255, 255, 1);
+height: 3.4em;
+min-width: 3em;
+padding: 0 2em;
 &:hover,
 &:focus {
   box-shadow: inset 0 0 999em rgba(0, 0, 0, 0.1);
@@ -50,6 +50,8 @@ padding: 0 0.68em;
   grid-gap: 0.68em;
   grid-auto-flow: column;
   align-content: center;
+
+ ${props => props.outline ? 'background: none; border: 2px solid white; color: white; &:hover { background-color: rgba(255,255,255,1); color: black; }' : 'background-color: rgba(255, 255, 255, 1);'}
 }
 `
 
@@ -67,7 +69,7 @@ const Slider = () => {
     `}>
       <div css={`margin-left: 10%;`}>
         <h1 css={`margin-bottom: 2rem;`}>Welcome to the future!</h1>
-        <Button to="/emotion">Contact</Button>{' '}
+        <Button outline to="/emotion">Contact</Button>{' '}
         <Button to="/emotion">Click me!</Button>
       </div>
     </div>
