@@ -2,16 +2,34 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'react-emotion'
 import typography from '../../utils/typography'
-
-const Navbar = styled('nav')`
-  background: hotpink;
+import logo from '../../images/logo.svg'
+import Hamburger from './Hamburger'
+const Container = styled('header')`
   height: 75px;
+  padding: 0 1em;
   display: flex;
   align-items: center;
+  box-shadow: 0 1px 0 #DBDBDB;
+  position: relative;
+  justify-content: space-between;
+  img {
+    max-height: 40px;
+    margin: 0;
+  }
+`
+
+const Navbar = styled('nav')`
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
 `
 const NavItem = styled(Link)`
   text-decoration: none;
   padding: 0 20px;
+  color: #30047d;
+  font-size: 1.1em;
+  text-transform: uppercase;
   &.${(props) => props.activeClassName} {
     color: paleturquoise;
     text-decoration: underline;
@@ -23,33 +41,14 @@ const NavItem = styled(Link)`
 // }
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem'
-    }}
-  >
-
+  <Container>
+    <Link to="/"><img src={logo} alt="Logo" /></Link>
     <Navbar>
       <NavItem to="/">Home</NavItem>
       <NavItem to="/page-2">About</NavItem>
     </Navbar>
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem'
-      }}
-    >
-
-      <h1 style={{ margin: 0 }}>
-
-        <Link>
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
+    <Hamburger />
+  </Container>
 )
 
 export default Header
