@@ -5,10 +5,12 @@ import {
 } from 'typography-breakpoint-constants'
 
 const options = {
-  baseFontSize: `18px`,
+  baseFontSize: `20px`,
   baseLineHeight: 1.45,
   blockMarginBottom: 0.75,
   scaleRatio: 2.15,
+  headerFontFamily: ['Playfair Display', 'serif'],
+  bodyFontFamily: ['Open Sans', 'serif'],
   overrideStyles: ({ rhythm, scale }, options) => {
     return {
       'h1,h2,h3,h4': {
