@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'react-emotion'
-import bg from '../../public/static/images/bg.jpg'
+import bg from '../images/bg.jpg'
 
 const Button = styled(Link)`
 position: relative;
