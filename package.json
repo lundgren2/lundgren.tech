@@ -7,12 +7,17 @@
     "emotion": "^9.0.2",
     "emotion-server": "^9.0.2",
     "gatsby": "^1.9.223",
+    "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.38",
     "gatsby-plugin-emotion": "^1.1.15",
     "gatsby-plugin-react-helmet": "^2.0.6",
     "gatsby-plugin-typography": "^1.7.17",
+    "gatsby-source-contentful": "^1.3.44",
+    "gatsby-transformer-remark": "^1.7.37",
+    "lodash": "^4.17.5",
     "react-emotion": "^9.0.2",
     "react-helmet": "^5.2.0",
+    "slash": "^1.0.0",
     "typography-breakpoint-constants": "^0.15.10"
   },
   "keywords": [
@@ -24,6 +29,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "deploy": "gatsby build && netlify deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
