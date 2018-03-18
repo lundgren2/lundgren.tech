@@ -9,9 +9,11 @@ const Div = styled('div')`
   align-items: center;
   cursor: pointer;
   transition-timing-function: linear;
-  transition-duration: .15s;
-  transition-property: opacity,filter;
-  .inner, .inner::before, .inner::after {
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  .inner,
+  .inner::before,
+  .inner::after {
     content: '';
     position: absolute;
     height: 3px;
@@ -19,35 +21,36 @@ const Div = styled('div')`
     background: #30047d;
     /* transform-origin: center; */
     transition-timing-function: ease;
-    transition-duration: .15s;
+    transition-duration: 0.15s;
     transition-property: transform;
   }
-  .inner::before  {
+  .inner::before {
     top: -10px;
-    transition: top .1s ease-in .25s,opacity .1s ease-in;
+    transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
   }
   .inner {
-    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
-    transition-duration: .22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-duration: 0.22s;
     top: 50%;
-    margin-top: -2px; 
+    margin-top: -2px;
   }
   .inner::after {
     bottom: -10px;
-    transition: bottom .1s ease-in .25s,transform .22s cubic-bezier(.55,.055,.675,.19);
+    transition: bottom 0.1s ease-in 0.25s,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   &.is-active {
-    .inner::before  {
+    .inner::before {
       top: 0;
       opacity: 0;
     }
     .inner {
       transform: rotate(45deg);
-      
     }
     .inner::after {
       bottom: 0;
-      transition: bottom .1s ease-out,      transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+      transition: bottom 0.1s ease-out,
+        transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 
       transform: rotate(-90deg);
     }
@@ -58,11 +61,11 @@ const Div = styled('div')`
 `
 
 export default class Hamburger extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { isToggledNav: false }
   }
-  render () {
+  render() {
     return (
       <Div
         onClick={this.toggleNav}
