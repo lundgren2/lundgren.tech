@@ -16,6 +16,12 @@ yarn run deploy
 
 ## Features
 
+### GraphiQL
+View GraphiQL, an in-browser IDE, to explore your site's data and schema
+```
+http://localhost:8000/___graphql
+```
+
 ### Format
 ```sh
 yarn run format

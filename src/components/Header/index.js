@@ -47,7 +47,7 @@ const Header = () => (
     </Link>
     <Navbar>
       <NavItem to="/">Home</NavItem>
-      <NavItem to="/page-2">About</NavItem>
+      <NavItem to="/about">About</NavItem>
     </Navbar>
     <Hamburger />
   </Container>
