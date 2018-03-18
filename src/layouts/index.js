@@ -13,7 +13,7 @@ import './index.css'
 const Wrapper = styled('div')`
   margin: 0 auto;
   padding: 0px, 1.0875rem 1.45rem;
-  width: 100%; 
+  width: 100%;
   @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 `
 
@@ -28,9 +28,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <TypographyStyle typography={typography} />
     <Header />
-    <Wrapper>
-      {children()}
-    </Wrapper>
+    <Wrapper>{children()}</Wrapper>
     {/* <Footer /> */}
   </div>
 )

@@ -9,10 +9,10 @@ const Container = styled('header')`
   padding: 0 1em;
   display: flex;
   align-items: center;
-  box-shadow: 0 1px 0 #DBDBDB;
+  box-shadow: 0 1px 0 #dbdbdb;
   position: relative;
   justify-content: space-between;
-  img {
+  img {
     max-height: 55px;
     margin-top: 25px;
   }
@@ -30,7 +30,7 @@ const NavItem = styled(Link)`
   color: #30047d;
   font-size: 1.1em;
   text-transform: uppercase;
-  &.${(props) => props.activeClassName} {
+  &.${props => props.activeClassName} {
     color: paleturquoise;
     text-decoration: underline;
   }
@@ -42,7 +42,9 @@ const NavItem = styled(Link)`
 
 const Header = () => (
   <Container>
-    <Link to="/"><img src={logo} alt="Logo" /></Link>
+    <Link to="/">
+      <img src={logo} alt="Logo" />
+    </Link>
     <Navbar>
       <NavItem to="/">Home</NavItem>
       <NavItem to="/page-2">About</NavItem>

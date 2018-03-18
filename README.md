@@ -1,13 +1,22 @@
-# gatsby-starter-default
-The default Gatsby starter
+# ld-gatsby-starter
+A sweet Gatsby starter for new awesome projects.
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
 
 Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
+```sh
+yarn install
 ```
 
-## Deploy
+## Deploy (assuming netlify-cli is installed and .netlify file is configured)
+Push your site directly to [Netlify](https://www.netlify.com/)
+```sh
+yarn run deploy
+```
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Features
+
+### Format
+```sh
+yarn run format
+```
