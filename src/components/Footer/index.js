@@ -9,7 +9,7 @@ const Wrapper = styled('footer')`
   color: white;
 `
 export default class Footer extends Component {
-  render () {
+  render() {
     return (
       <Wrapper>
         <Copyright />
