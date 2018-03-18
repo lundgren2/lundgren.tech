@@ -13,8 +13,8 @@ const Container = styled('header')`
   position: relative;
   justify-content: space-between;
   img {
-    max-height: 55px;
-    margin-top: 25px;
+    max-height: 48px;
+    margin-top: 28px;
   }
 `
 

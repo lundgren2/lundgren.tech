@@ -9,7 +9,7 @@ const Title = styled('h2')`
   transition: all .5 ease-in-out;
   background-color: rgba(0,0,0,0.5); // overlay
   &:hover {
-    background-color: rgba(111,111,111,0.5);
+    background-color: rgba(0,0,0,0.1);
   }
   z-index: 99;
   font-size: 2.5rem;
