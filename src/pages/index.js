@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { injectGlobal } from 'emotion'
-import styled, { css } from 'react-emotion'
+import styled from 'react-emotion'
 
 import Card from '../components/Card'
 import bg from '../images/bg.jpg'
-// import Slider from '../components/Slider'
+import { BlogPosts } from '../components/Post/BlogPosts'
+
 injectGlobal`
   * {
     margin: 0;
@@ -46,38 +47,6 @@ const CardWrapper = styled.div`
     grid-gap: 0.25em;
   }
 `
-
-const BlogPost = ({ post }) => {
-  return (
-    <article css={`margin: 1.5em auto; padding: 1em;`}>
-      <h1>{post.title}</h1>
-      <p>{post.createdAt}</p>
-      <div css={`
-        p:first-of-type:first-letter {
-          color: rgb(48, 4, 125);
-          float: left;
-          font-family: 'Playfair Display', serif;
-          text-transform: uppercase;
-          font-size: 75px;
-          line-height: 60px;
-          padding-top: 4px;
-          padding-right: 8px;
-          padding-left: 3px;
-        }
-        `}
-      dangerouslySetInnerHTML={{
-        __html: post.body.childMarkdownRemark.html
-      }}
-      />
-    </article>
-  )
-}
-
-const BlogPosts = ({posts}) => (
-  <section>
-    {posts.map(edge => <BlogPost key={edge.node.id} post={edge.node} />)}
-  </section>
-)
 
 const IndexPage = ({data}) => {
   const posts = data.allContentfulPost.edges

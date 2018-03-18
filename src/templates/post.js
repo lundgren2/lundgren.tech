@@ -1,12 +1,9 @@
-import React from "react"
-import Link from "gatsby-link"
-import * as PropTypes from "prop-types"
-import Img from "gatsby-image"
-
-import { rhythm } from "../utils/typography"
+import React from 'react'
+import * as PropTypes from 'prop-types'
+import { BlogPost } from '../components/Post/BlogPosts'
 
 const propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 class PostTemplate extends React.Component {
@@ -20,17 +17,7 @@ class PostTemplate extends React.Component {
       createdAt
     } = post
 
-    return (
-      <div>
-        <h1>{title}</h1>
-        <p>{createdAt}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: body.childMarkdownRemark.html
-          }}
-        />
-      </div>
-    )
+    return (<BlogPost post={post}/>)
   }
 }
 
