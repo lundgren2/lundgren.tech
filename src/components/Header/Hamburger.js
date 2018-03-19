@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 
 const Div = styled('div')`
@@ -19,7 +20,6 @@ const Div = styled('div')`
     height: 3px;
     width: 100%;
     background: #30047d;
-    /* transform-origin: center; */
     transition-timing-function: ease;
     transition-duration: 0.15s;
     transition-property: transform;
@@ -60,25 +60,15 @@ const Div = styled('div')`
   }
 `
 
-export default class Hamburger extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { isToggledNav: false }
-  }
-  render() {
-    return (
-      <Div
-        onClick={this.toggleNav}
-        className={this.state.isToggledNav && 'is-active'}
-      >
-        <div className="inner" />
-      </Div>
-    )
-  }
+const Hamburger = ({ toggleNav, isToggledNav }) => (
+  <Div onClick={toggleNav} className={isToggledNav && 'is-active'}>
+    <div className="inner" />
+  </Div>
+)
 
-  toggleNav = () => {
-    this.setState(prevState => {
-      return { isToggledNav: !prevState.isToggledNav }
-    })
-  }
+Hamburger.propTypes = {
+  isToggledNav: PropTypes.bool,
+  toggleNav: PropTypes.func
 }
+
+export default Hamburger

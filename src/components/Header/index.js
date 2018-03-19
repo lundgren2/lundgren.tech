@@ -4,6 +4,8 @@ import styled, { css } from 'react-emotion'
 import typography from '../../utils/typography'
 import logo from '../../images/logo.svg'
 import Hamburger from './Hamburger'
+import './style.styl'
+
 const Container = styled('header')`
   height: 75px;
   padding: 0 1em;
@@ -40,17 +42,37 @@ const NavItem = styled(Link)`
 //   activeClassName: 'active'
 // }
 
-const Header = () => (
-  <Container>
-    <Link to="/">
-      <img src={logo} alt="Logo" />
-    </Link>
-    <Navbar>
-      <NavItem to="/">Home</NavItem>
-      <NavItem to="/about">About</NavItem>
-    </Navbar>
-    <Hamburger />
-  </Container>
-)
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { isToggledNav: false }
+  }
 
-export default Header
+  render() {
+    return (
+      <Container>
+        <Link to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
+        <Navbar className="navbar">
+          <NavItem className="nav-item" to="/">
+            Home
+          </NavItem>
+          <NavItem className="nav-item" to="/about">
+            About
+          </NavItem>
+        </Navbar>
+        <Hamburger
+          toggleNav={this.toggleNav}
+          isToggledNav={this.state.isToggledNav}
+        />
+      </Container>
+    )
+  }
+
+  toggleNav = () => {
+    this.setState(prevState => {
+      return { isToggledNav: !prevState.isToggledNav }
+    })
+  }
+}
