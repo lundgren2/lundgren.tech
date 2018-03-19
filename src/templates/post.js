@@ -9,8 +9,6 @@ const propTypes = {
 class PostTemplate extends React.Component {
   render() {
     const post = this.props.data.contentfulPost
-    const { title, id, slug, body, createdAt } = post
-
     return <BlogPost post={post} />
   }
 }
