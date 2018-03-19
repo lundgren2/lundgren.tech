@@ -48,7 +48,7 @@ const CardWrapper = styled.div`
   }
 `
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   const posts = data.allContentfulPost.edges
   return (
     <Wrapper>

@@ -1,24 +1,18 @@
-import React from "react"
-import Link from "gatsby-link"
-import * as PropTypes from "prop-types"
-import Img from "gatsby-image"
+import React from 'react'
+import Link from 'gatsby-link'
+import * as PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography'
 
 const propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 class PageTemplate extends React.Component {
   render() {
     const page = this.props.data.contentfulPage
-    const {
-      title,
-      id,
-      slug,
-      body,
-      createdAt
-    } = page
+    const { title, id, slug, body, createdAt } = page
 
     return (
       <div>
