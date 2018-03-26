@@ -1,12 +1,16 @@
 {
   "extends": [
     "standard",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
   ],
   "plugins": [
     "standard",
     "react",
-    "promise"
+    "promise",
+    "prettier",
+    "html"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -17,7 +21,16 @@
   "rules": {
     "react/prop-types": 0,
     "react/display-name": 0,
-    "space-before-function-paren": 0
+    "space-before-function-paren": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 120
+      }
+    ]
   },
   "env": {
     "browser": true
