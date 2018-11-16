@@ -1,12 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled, { css } from 'react-emotion'
-import typography from '../../utils/typography'
-import logo from '../../images/logo.svg'
-import Hamburger from './Hamburger'
-import './style.styl'
+import React from "react";
+import Link from "gatsby-link";
+import styled, { css } from "react-emotion";
+import typography from "../../utils/typography";
+import logo from "../../images/logo.svg";
+import Hamburger from "./Hamburger";
+import "./style.styl";
 
-const Container = styled('header')`
+const Container = styled("header")`
   height: 75px;
   padding: 0 1em;
   display: flex;
@@ -18,14 +18,29 @@ const Container = styled('header')`
     max-height: 55px;
     margin-top: 25px;
   }
-`
+`;
 
-const Navbar = styled('nav')`
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
+const Navbar = styled("nav")`
+  display: block;
+  @media (max-width: 768px) {
+    transition: all 200ms;
+    max-height: 0;
+    height: 100vh;
+    display: flex;
+    position absolute;
+    background: white;
+    max-height 100vh;
+    width: 100%;
+    z-index: 2;
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    justify-content: center
+    align-items: center
+    flex-direction: column
   }
-`
+`;
 const NavItem = styled(Link)`
   text-decoration: none;
   padding: 0 20px;
@@ -36,7 +51,7 @@ const NavItem = styled(Link)`
     color: paleturquoise;
     text-decoration: underline;
   }
-`
+`;
 
 // NavItem.defaultProps = {
 //   activeClassName: 'active'
@@ -44,8 +59,8 @@ const NavItem = styled(Link)`
 
 export default class Header extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { isToggledNav: false }
+    super(props);
+    this.state = { isToggledNav: false };
   }
 
   render() {
@@ -54,7 +69,11 @@ export default class Header extends React.Component {
         <Link to="/">
           <img src={logo} alt="Logo" />
         </Link>
-        <Navbar className="navbar">
+        <Navbar
+          className={
+            this.state.isToggledNav ? "mobilenav-open navbar" : "navbar"
+          }
+        >
           <NavItem className="nav-item" to="/">
             Home
           </NavItem>
@@ -67,12 +86,12 @@ export default class Header extends React.Component {
           isToggledNav={this.state.isToggledNav}
         />
       </Container>
-    )
+    );
   }
 
   toggleNav = () => {
     this.setState(prevState => {
-      return { isToggledNav: !prevState.isToggledNav }
-    })
-  }
+      return { isToggledNav: !prevState.isToggledNav };
+    });
+  };
 }
