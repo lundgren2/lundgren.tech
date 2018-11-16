@@ -1,6 +1,6 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
-import { BlogPost } from '../components/Post/BlogPosts'
+import { BlogPost } from '../components/Post/BlogPosts'
 
 const propTypes = {
   data: PropTypes.object.isRequired
@@ -9,15 +9,7 @@ const propTypes = {
 class PostTemplate extends React.Component {
   render() {
     const post = this.props.data.contentfulPost
-    const {
-      title,
-      id,
-      slug,
-      body,
-      createdAt
-    } = post
-
-    return (<BlogPost post={post}/>)
+    return <BlogPost post={post} />
   }
 }
 

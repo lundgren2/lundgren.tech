@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'react-emotion'
 
-const BlogPosts = ({posts}) => (
+const BlogPosts = ({ posts }) => (
   <section className="posts">
     {posts.map(edge => <BlogPost key={edge.node.id} post={edge.node} />)}
   </section>
@@ -31,20 +31,19 @@ const Article = styled('article')`
   padding: 1em;
 `
 
-const BlogPost = ({post}) => {
-  const {
-    title,
-    slug,
-    body,
-    createdAt
-  } = post
+const BlogPost = ({ post }) => {
+  const { title, slug, body, createdAt } = post
   return (
     <Article className="post">
-      <h1><BlogLink to={slug}>{title}</BlogLink></h1>
+      <h1>
+        <BlogLink to={slug}>{title}</BlogLink>
+      </h1>
       <p>{createdAt}</p>
-      <Body dangerouslySetInnerHTML={{
-        __html: body.childMarkdownRemark.html
-      }}/>
+      <Body
+        dangerouslySetInnerHTML={{
+          __html: body.childMarkdownRemark.html
+        }}
+      />
     </Article>
   )
 }
