@@ -1,20 +1,22 @@
+const config = require('./config/website')
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
+}
+
 module.exports = {
   siteMetadata: {
     title: 'LD Gatsby Starter',
+    siteUrl: config.siteUrl,
   },
   plugins: [
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        spaceId: "csjnu0su6qne",
-        accessToken: "b2c995f06527ae8c305049f8dfc54a84d4f552d3f870aee0053d4222e7b4650c"
-      }
-    },
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-typography',
     'gatsby-plugin-emotion',
-    'gatsby-plugin-stylus',
+    {
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfig,
+    },
   ],
-
-};
+}

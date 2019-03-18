@@ -6,13 +6,13 @@ import Img from 'gatsby-image'
 import heroStyles from '../components/hero.module.css'
 
 class BlogPostTemplate extends React.Component {
-  render() {
+  render () {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
       <div style={{ background: '#fff' }}>
-        <Helmet title={`${post.title} | ${siteTitle}`} />
+        <Helmet title={`${ post.title } | ${ siteTitle }`} />
         <div className={heroStyles.hero}>
           <Img
             className={heroStyles.heroImage}
