@@ -1,19 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { injectGlobal } from 'emotion'
-import styled from 'react-emotion'
+import { graphql, Link } from 'gatsby'
+// import { injectGlobal } from 'emotion'
+import styled from '@emotion/styled'
 
-import Card from '../components/Card'
+// import Card from '../components/Card'
 import bg from '../images/bg.jpg'
-import { BlogPosts } from '../components/Post/BlogPosts'
-
-injectGlobal`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
+// import { BlogPosts } from '../components/Post/BlogPosts'
 
 const Wrapper = styled.section`
   align-items: center;
@@ -49,17 +41,11 @@ const CardWrapper = styled.div`
 `
 
 const IndexPage = ({ data }) => {
-  const posts = data.allContentfulPost.edges
+  // const posts = data.allContentfulPost.edges
   return (
     <Wrapper>
       <Title>Lundgren Design</Title>
-      <BlogPosts posts={posts} />
-
-      <CardWrapper>
-        <Card text="Test" img="https://source.unsplash.com/random/800x600" />
-        <Card text="Test" img="https://source.unsplash.com/random/800x601" />
-        <Card text="Test" img="https://source.unsplash.com/random/800x602" />
-      </CardWrapper>
+      {/* <BlogPosts posts={posts} /> */}
 
       <img src={bg} alt="large-img" />
     </Wrapper>
@@ -75,16 +61,11 @@ export const query = graphql`
         title
       }
     }
-    allContentfulPost {
+    allContentfulBlogPost {
       edges {
         node {
           title
-          body {
-            childMarkdownRemark {
-              html
-              excerpt
-            }
-          }
+         
           createdAt(formatString: "DD MMMM, YYYY")
           slug
           id

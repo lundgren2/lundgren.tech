@@ -16,10 +16,24 @@
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
+    "emotion": "^10.0.9",
     "gatsby": "^2.1.31",
+    "gatsby-image": "^2.0.34",
     "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-google-analytics": "^2.0.17",
+    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-netlify": "^2.0.13",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-sharp": "^2.0.29",
+    "gatsby-source-contentful": "^2.0.39",
+    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-transformer-remark": "^2.3.5",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "polished": "^3.0.3",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -33,9 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/lundgren2/ld-gatsby-starter/"
   }
 }

@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "react-emotion";
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from '@emotion/styled'
 
-const Div = styled("div")`
+const Div = styled('div')`
   width: 40px;
   height: 35px;
   position: relative;
@@ -16,7 +16,7 @@ const Div = styled("div")`
   .inner,
   .inner::before,
   .inner::after {
-    content: "";
+    content: '';
     position: absolute;
     height: 3px;
     width: 100%;
@@ -59,17 +59,17 @@ const Div = styled("div")`
   @media (min-width: 768px) {
     display: none;
   }
-`;
+`
 
 const Hamburger = ({ toggleNav, isToggledNav }) => (
-  <Div onClick={toggleNav} className={isToggledNav && "is-active"}>
+  <Div onClick={toggleNav} className={isToggledNav && 'is-active'}>
     <div className="inner" />
   </Div>
-);
+)
 
 Hamburger.propTypes = {
   isToggledNav: PropTypes.bool,
-  toggleNav: PropTypes.func
-};
+  toggleNav: PropTypes.func,
+}
 
-export default Hamburger;
+export default Hamburger
