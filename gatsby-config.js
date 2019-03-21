@@ -1,18 +1,11 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
+const config = require('./config/website')
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
-}
-
-const config = require('./config/website')
-const path = require(`path`)
-
-if (!contentfulConfig.spaceId || !contentfulConfig.accessToken) {
-  throw new Error(
-    'Contentful spaceId and the delivery token need to be provided.'
-  )
 }
 
 module.exports = {
@@ -21,29 +14,22 @@ module.exports = {
     siteUrl: config.siteUrl,
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfig,
+    },
     'gatsby-transformer-remark',
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        path: `${__dirname}/src/images`,
       },
     },
-    {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/static/images`,
-        name: `uploads`,
-      },
-    },
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: 'gatsby-source-contentful',
-      options: contentfulConfig,
-    },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -53,16 +39,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Lundgren Design Gatsby Starter`,
+        short_name: `starter`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `./gatsby-icon.ico`,
+        icon: `static/images/logo-1024.png`,
       },
     },
-    'gatsby-plugin-react-helmet',
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],

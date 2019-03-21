@@ -61,11 +61,11 @@ export const query = graphql`
         title
       }
     }
+    files()
     allContentfulBlogPost {
       edges {
         node {
           title
-         
           createdAt(formatString: "DD MMMM, YYYY")
           slug
           id
