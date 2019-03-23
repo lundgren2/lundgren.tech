@@ -1,49 +1,33 @@
 module.exports = {
-  extends: ['standard'],
-  plugins: ['standard', 'react'],
-  rules: {
-    'no-var': 'error', // optional, recommended when using es6+
-    'no-unused-vars': 1, // recommended
-    'arrow-spacing': ['error', { before: true, after: true }], // recommended
-    indent: ['error', 2],
-    'comma-dangle': [
-      'error',
-      {
-        objects: 'only-multiline',
-        arrays: 'only-multiline',
-        imports: 'never',
-        exports: 'never',
-        functions: 'never',
-      },
-    ],
-
-    // options to emulate prettier setup
-    semi: ['error', 'never'],
-    'max-len': ['error', { code: 80 }],
-    'arrow-parens': ['error', 'as-needed'],
-
-    // standard.js
-    'space-before-function-paren': [
-      'error',
-      {
-        named: 'always',
-        anonymous: 'always',
-        asyncArrow: 'always',
-      },
-    ],
-
-    // standard plugin - options
-    'standard/object-curly-even-spacing': ['error', 'either'],
-    'standard/array-bracket-even-spacing': ['error', 'either'],
-    'standard/computed-property-even-spacing': ['error', 'even'],
-    'standard/no-callback-literal': ['error', ['cb', 'callback']],
-
-    // react plugin - options
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
   },
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 8, // optional, recommended 6+
+  "rules": {
+    "no-console": 0,
+    "react/jsx-filename-extension": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-boolean-value": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "semi": false,
+        "printWidth": 100
+      }
+    ]
   },
+  "plugins": [
+    "html",
+    "prettier",
+    "react-hooks"
+  ]
 }

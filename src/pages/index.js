@@ -1,11 +1,6 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-// import { injectGlobal } from 'emotion'
+import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-
-// import Card from '../components/Card'
-import bg from '../images/bg.jpg'
-// import { BlogPosts } from '../components/Post/BlogPosts'
 
 const Wrapper = styled.section`
   align-items: center;
@@ -14,40 +9,18 @@ const Wrapper = styled.section`
   position: relative;
 `
 
-const Title = styled.h1`
-  font-size: 3em;
-  text-align: center;
-  word-wrap: break-word;
-  color: #000;
-  margin-bottom: 0.5em;
-  padding: 0.5em 1em;
-  & a {
-    color: #8be9fd;
-  }
-  @media (min-width: 768px) {
-    font-size: 4em;
-  }
-`
-
-const CardWrapper = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  /* grid-template-rows: auto-fit; */
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.25em;
-  }
-`
-
 const IndexPage = ({ data }) => {
-  // const posts = data.allContentfulPost.edges
+  console.log(data)
+  const posts = data.allMdx.edges
   return (
     <Wrapper>
-      <Title>Lundgren Design</Title>
-      {/* <BlogPosts posts={posts} /> */}
-
-      <img src={bg} alt="large-img" />
+      <h1>Lundgren Design</h1>
+      {posts.map(({ node }) => (
+        <article key={node.fields.slug}>
+          <h2 className="post">{node.frontmatter.title}</h2>
+          <div className="post-content">{node.frontmatter.excerpt}</div>
+        </article>
+      ))}
     </Wrapper>
   )
 }
@@ -55,20 +28,23 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-  query SiteMeta {
+  query {
     site {
       siteMetadata {
         title
       }
     }
-    files()
-    allContentfulBlogPost {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          title
-          createdAt(formatString: "DD MMMM, YYYY")
-          slug
-          id
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
         }
       }
     }

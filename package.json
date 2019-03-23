@@ -1,24 +1,25 @@
 {
-  "name": "ld-gatsby-starter",
   "private": true,
+  "name": "ld-gatsby-starter",
   "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "scripts": {
+    "dev": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "format": "eslint --fix --ext .jsx,.js",
     "deploy": "gatsby build && netlify deploy",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
+    "@mdx-js/mdx": "^0.20.3",
+    "@mdx-js/tag": "^0.20.3",
     "emotion": "^10.0.9",
     "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.34",
+    "gatsby-mdx": "^0.4.4",
     "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-manifest": "^2.0.24",
@@ -26,7 +27,7 @@
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-sharp": "^2.0.29",
-    "gatsby-source-contentful": "^2.0.39",
+    "gatsby-remark-images": "^3.0.10",
     "gatsby-source-filesystem": "^2.0.27",
     "gatsby-transformer-remark": "^2.3.5",
     "gatsby-transformer-sharp": "^2.1.17",
@@ -37,16 +38,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.15.2",
-    "eslint-config-standard": "^12.0.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-html": "^5.0.3",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-standard": "^4.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lundgren2/ld-gatsby-starter/"
+    "eslint-plugin-react-hooks": "^1.5.1",
+    "prettier": "^1.16.4"
   }
 }
