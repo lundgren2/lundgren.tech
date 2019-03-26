@@ -1,9 +1,12 @@
 # Gatsby Theme Lundgren Design Blog
 A sweet Gatsby starter for new awesome projects.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+## Features
+- Emotion: CSS in JS
+- MDX: JSX in Markdown
+- ESLint
+- Prettier
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
 ```sh
 yarn install
 ```

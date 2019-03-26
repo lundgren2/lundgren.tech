@@ -9,9 +9,11 @@ module.exports = {
   siteDescription: `Lundgren Design Gatsby Starter`,
   author: `Tobias Lundgren <@lungren2>`, // Author for schemaORGJSONLD
 
-  userTwitter: `@lundgrendesign`, // Twitter Username
+  // siteFBAppID: '123456789', // Facebook App ID - Optional
   ogSiteName: `lundgrendesign`, // Facebook Site Name
   ogLanguage: `sv_SE`, // Facebook Language
+  userTwitter: `@lundgrendesign`, // Twitter Username
+  googleAnalyticsID: 'UA-47519312-3',
 
   // Manifest and Progress color
   themeColor: `#0D1552`,
