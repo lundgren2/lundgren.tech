@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 // import { injectGlobal } from 'emotion'
 import styled from '@emotion/styled'
-
 // import Card from '../components/Card'
 import bg from '../images/bg.jpg'
 // import { BlogPosts } from '../components/Post/BlogPosts'

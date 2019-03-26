@@ -1,4 +1,4 @@
-# ld-gatsby-starter
+# Gatsby Theme Lundgren Design Blog
 A sweet Gatsby starter for new awesome projects.
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
