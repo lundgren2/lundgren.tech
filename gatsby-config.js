@@ -69,3 +69,13 @@ module.exports = {
     `gatsby-plugin-netlify`,
   ],
 }
+
+exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
+  const wpconfig = getConfig()
+  if (stage.startsWith('develop') && wpconfig.resolve) {
+    wpconfig.resolve.alias = {
+      ...wpconfig.resolve.alias,
+      'react-dom': '@hot-loader/react-dom',
+    }
+  }
+}
