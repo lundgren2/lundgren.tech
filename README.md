@@ -1,31 +1,24 @@
-# Gatsby Theme Lundgren Design Blog
-A sweet Gatsby starter for new awesome projects.
+<h1 align="center">
+  tobiasl.se
+</h1>
 
-## Features
-- Emotion: CSS in JS
-- MDX: JSX in Markdown
-- ESLint
-- Prettier
+This is my personal website.
 
-```sh
-yarn install
-```
+## 🚀 Quick start
 
-## Deploy (assuming netlify-cli is installed and .netlify file is configured)
-Push your site directly to [Netlify](https://www.netlify.com/)
-```sh
-yarn run deploy
-```
+1.  **Start developing.**
 
-## Features
+    Navigate into the site’s directory and start it up.
 
-### GraphiQL
-View GraphiQL, an in-browser IDE, to explore your site's data and schema
-```
-http://localhost:8000/___graphql
-```
+    ```sh
+    cd tl-site/
+    gatsby develop
+    ```
 
-### Format
-```sh
-yarn run format
-```
+1.  **Open the source code and start editing!**
+
+    Your site is now running at `http://localhost:8000`!
+
+    \_Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
+
+    Open the `tl-site` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
