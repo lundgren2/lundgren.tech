@@ -1,6 +1,5 @@
-import React from 'react'
-
-import { keyframes } from '@emotion/core'
+import React from 'react';
+import { keyframes } from '@emotion/core';
 
 export default ({ items, color }) => (
   <div
@@ -28,13 +27,14 @@ export default ({ items, color }) => (
       },
     }}
   >
-    {items.map(item => (
-      <span key={item} css={{ color }}>
-        {item}
-      </span>
-    ))}
+    {items &&
+      items.map(item => (
+        <span key={item} css={{ color }}>
+          {item}
+        </span>
+      ))}
   </div>
-)
+);
 
 const topToBottom = keyframes({
   '0%': {
@@ -62,4 +62,4 @@ const topToBottom = keyframes({
   '100%': {
     opacity: 0,
   },
-})
+});

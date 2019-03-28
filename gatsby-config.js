@@ -1,6 +1,12 @@
 module.exports = {
   __experimentalThemes: ['gatsby-theme-lundgren-blog'],
   plugins: [
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
