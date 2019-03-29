@@ -19,7 +19,7 @@ module.exports = {
         // icon: `static/image/logo-1024.png`,
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
 };
