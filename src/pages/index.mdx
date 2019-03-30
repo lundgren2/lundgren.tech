@@ -4,11 +4,18 @@ title: index
 
 import { Link } from 'gatsby';
 import Skills from '../components/Skills.js';
-import { H2, Button } from '$components';
+import { H2, Button, WideContainer } from '$components';
+import { Flex, Box } from '@rebass/emotion';
 import TobiasImg from '../components/tobias-image.js';
 
-<H2>Hello world!</H2>
-
-<TobiasImg />
-
-<Skills items={['Student, Pro']} />
+<WideContainer>
+  <Flex flexDirection={['column', 'row']} flexWrap="wrap">
+    <Flex alignSelf="center" width={[1, 1 / 2]}>
+      <H2>Hello world!</H2>
+      <Skills items={['Student, Pro']} />
+    </Flex>
+    <Box /*bg="rgba(177,216,198,0.4)"*/ width={[1, 1 / 2]}>
+      <TobiasImg />
+    </Box>
+  </Flex>
+</WideContainer>

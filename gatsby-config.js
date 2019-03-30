@@ -1,5 +1,5 @@
 module.exports = {
-  __experimentalThemes: ['gatsby-theme-lundgren-blog'],
+  __experimentalThemes: ['@lundgren/gatsby-theme-lundgren-blog'],
   plugins: [
     // {
     //   resolve: `gatsby-plugin-google-analytics`,

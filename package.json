@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
+    "@lundgren/gatsby-theme-lundgren-blog": "*",
     "@mdx-js/mdx": "^0.20.3",
     "@mdx-js/tag": "^0.20.3",
     "gatsby": "^2.3.2",
@@ -20,7 +21,6 @@
     "gatsby-plugin-manifest": "^2.0.25",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-page-creator": "^2.0.12",
-    "gatsby-theme-lundgren-blog": "*",
     "gray-percentage": "^2.0.0",
     "polished": "^3.1.0",
     "react": "^16.8.5",
