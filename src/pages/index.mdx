@@ -5,17 +5,47 @@ title: index
 import { Link } from 'gatsby';
 import Skills from '../components/Skills.js';
 import { H2, Button, WideContainer } from '$components';
-import { Flex, Box } from '@rebass/emotion';
+import { Flex, Box, Text } from '@rebass/emotion';
 import TobiasImg from '../components/tobias-image.js';
 
 <WideContainer>
-  <Flex flexDirection={['column', 'row']} flexWrap="wrap">
-    <Flex alignSelf="center" width={[1, 1 / 2]}>
-      <H2>Hello world!</H2>
-      <Skills items={['Student, Pro']} />
+  <Flex flexDirection={['column', 'row']} flexWrap="wrap" mt={[4, 0]}>
+    <Flex alignSelf="center" width={[1, 1 / 2]} flexDirection="column">
+      <H2>Hello world! 👋</H2>
+      <Text fontSize={['1.25em', '1.5em']}>
+        I'm a{' '}
+        <Skills
+          items={[
+            'full-Stack developer',
+            'computer science student',
+            'entrepreneur',
+            'software engineer',
+          ]}
+        />
+        <br />I will share my thoughts and portfolio here.
+      </Text>
+      <br />
+      <Text>
+        Feel free to contact:{' '}
+        <a href="mailto:me@lundgren.tech">me@lundgren.tech</a>.
+      </Text>
     </Flex>
-    <Box /*bg="rgba(177,216,198,0.4)"*/ width={[1, 1 / 2]}>
+    <Box width={[1, 1 / 2]}>
       <TobiasImg />
     </Box>
   </Flex>
 </WideContainer>
+
+## Blog
+
+What’s on my mind and in my notes - a collection of my personal best practises and thoughts.
+
+---
+
+<br />
+
+### No blog posts yet 😢
+
+Stay tuned - I will add some blog posts soon...
+
+<!-- Hmm, how can the h1 be larger than h2? -->
