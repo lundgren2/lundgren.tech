@@ -4,10 +4,11 @@ title: index
 
 import { Link } from 'gatsby';
 import Skills from '../components/Skills.js';
-import { H2, Button, WideContainer } from '$components';
+import { H2, Button, WideContainer, Container } from '$components';
 import { Flex, Box, Text } from '@rebass/emotion';
 import TobiasImg from '../components/tobias-image.js';
 
+<Container>
 <WideContainer>
   <Flex flexDirection={['column', 'row']} flexWrap="wrap" mt={[4, 0]}>
     <Flex alignSelf="center" width={[1, 1 / 2]} flexDirection="column">
@@ -49,3 +50,5 @@ What’s on my mind and in my notes - a collection of my personal best practises
 Stay tuned - I will add some blog posts soon...
 
 <!-- Hmm, how can the h1 be larger than h2? -->
+
+</Container>
