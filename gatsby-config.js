@@ -1,20 +1,25 @@
 module.exports = {
-  siteMetadata: {
-    title: 'LD Gatsby Starter',
-  },
+  __experimentalThemes: ['@lundgren/gatsby-theme-lundgren-blog'],
   plugins: [
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     {
-      resolve: "gatsby-source-contentful",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        spaceId: "csjnu0su6qne",
-        accessToken: "b2c995f06527ae8c305049f8dfc54a84d4f552d3f870aee0053d4222e7b4650c"
-      }
+        name: `Lundgren Design Gatsby Starter`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        // icon: `static/image/logo-1024.png`,
+      },
     },
-    'gatsby-transformer-remark',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-typography',
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-stylus',
+    // `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`,
   ],
-
 };
