@@ -1,6 +1,4 @@
-<h1 align="center">
-  tobiasl.se
-</h1>
+# lundgren.tech
 
 This is my personal website.
 
@@ -11,7 +9,7 @@ This is my personal website.
     Navigate into the site’s directory and start it up.
 
     ```sh
-    cd tl-site/
+    cd lundgren.tech/
     gatsby develop
     ```
 
@@ -21,4 +19,4 @@ This is my personal website.
 
     \_Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
 
-    Open the `tl-site` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `lundgren.tech` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
