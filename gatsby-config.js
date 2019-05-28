@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env`,
+});
+
 module.exports = {
   __experimentalThemes: ['@lundgren/gatsby-theme-lundgren-blog'],
   plugins: [
