@@ -6,26 +6,26 @@
   "author": "Tobias Lundgren <me@tobiasl.se>",
   "license": "MIT",
   "scripts": {
-    "dev": "gatsby develop",
+    "clean": "rm -rf node_modules .cache public",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "deploy": "yarn build && netlify deploy --prod"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.10",
+    "@emotion/styled": "^10.0.11",
     "@lundgren/gatsby-theme-lundgren-blog": "*",
-    "@mdx-js/mdx": "^0.20.3",
-    "@mdx-js/tag": "^0.20.3",
-    "gatsby": "^2.3.2",
-    "gatsby-mdx": "^0.4.4",
+    "@mdx-js/mdx": "^1.0.0-rc.4",
+    "@mdx-js/react": "^1.0.20",
+    "gatsby": "^2.6.2",
+    "gatsby-mdx": "^0.6.3",
+    "gatsby-plugin-emotion": "^4.0.7",
     "gatsby-plugin-google-analytics": "^2.0.18",
-    "gatsby-plugin-manifest": "^2.0.25",
-    "gatsby-plugin-netlify": "^2.0.13",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-page-creator": "^2.0.12",
-    "gray-percentage": "^2.0.0",
-    "polished": "^3.1.0",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-netlify": "^2.0.17",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-page-creator": "^2.0.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

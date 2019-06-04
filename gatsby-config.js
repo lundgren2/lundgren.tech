@@ -1,6 +1,4 @@
-require('dotenv').config({
-  path: `.env`,
-});
+require('dotenv').config();
 
 module.exports = {
   __experimentalThemes: ['@lundgren/gatsby-theme-lundgren-blog'],
@@ -23,7 +21,7 @@ module.exports = {
         icon: `./src/images/favicon.png`,
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
 };

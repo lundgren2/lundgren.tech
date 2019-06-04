@@ -34,14 +34,14 @@ const style = {
   opacity: 0,
   position: `absolute`,
   display: 'inline-block',
-  ':nth-child(2)': {
+  ':nth-of-type(2)': {
     animationDelay: `3s`,
   },
-  ':nth-child(3)': {
+  ':nth-of-type(3)': {
     animationDelay: `6s`,
   },
 
-  ':nth-child(4)': {
+  ':nth-of-type(4)': {
     animationDelay: `9s`,
   },
 };
