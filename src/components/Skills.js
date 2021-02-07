@@ -1,5 +1,5 @@
 import React from 'react';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 const topToBottom = keyframes({
   '0%': {
@@ -48,7 +48,7 @@ const style = {
 export default ({ items, color }) => (
   <>
     {items &&
-      items.map(item => (
+      items.map((item) => (
         <span key={item} css={{ ...style, color }}>
           {item}.
         </span>
