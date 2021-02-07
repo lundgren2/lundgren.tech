@@ -8,8 +8,9 @@ This is my personal website.
 
     Navigate into the site’s directory and start it up.
 
+    1. Setup .env variable and then:
+
     ```sh
-    cd lundgren.tech/
     gatsby develop
     ```
 
