@@ -50,7 +50,7 @@ export default ({ items, color }) => (
     {items &&
       items.map((item) => (
         <span key={item} css={{ ...style, color }}>
-          {item}.
+          {`${item}.`}
         </span>
       ))}
   </>

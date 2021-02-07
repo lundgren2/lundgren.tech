@@ -1,6 +1,5 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier", "prettier/react"],
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
   "env": {
     "browser": true,
     "node": true,
@@ -19,16 +18,8 @@
     "react/jsx-filename-extension": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-boolean-value": 0,
+    "react/prop-types": 0,
     "import/no-extraneous-dependencies": 0,
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 80,
-        "semi": true
-      }
-    ]
   },
-  "plugins": ["html", "prettier", "react-hooks"]
+  "plugins": ["react-hooks"]
 }
