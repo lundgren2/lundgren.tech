@@ -180,4 +180,4 @@ export default () => (
     </g>
     <path className="st0" d="M42.2,525.9" />
   </Svg>
-  );
+);
